@@ -35,7 +35,7 @@ scale:
   
 # Domain configuration (update with your domain)
 domains:
-  - name: "your-domain.com"
+  - name: "jobless.yampi.eu"
     ssl: true
     
 # Backup configuration (optional)
