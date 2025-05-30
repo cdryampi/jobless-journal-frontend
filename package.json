@@ -10,6 +10,7 @@
     "start": "vite preview --host 0.0.0.0 --port 3000"
   },
   "devDependencies": {
+    "@types/node": "^22.15.28",
     "vite": "^6.3.5"
   },
   "dependencies": {

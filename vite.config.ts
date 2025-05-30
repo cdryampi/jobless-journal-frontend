@@ -1,10 +1,20 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+import { resolve } from 'path'
+import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(fileURLToPath(new URL('.', import.meta.url)), 'index.html'),
+        post: resolve(fileURLToPath(new URL('.', import.meta.url)), 'pages/post.html')
+      }
+    }
+  },
   optimizeDeps: {
     include: ['@ckeditor/ckeditor5-build-classic']
   },
