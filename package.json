@@ -1,0 +1,20 @@
+{
+  "name": "jobless-journal",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^41.4.2",
+    "@tailwindcss/vite": "^4.1.8",
+    "sweetalert2": "^11.22.0",
+    "tailwindcss": "^4.1.8"
+  }
+}

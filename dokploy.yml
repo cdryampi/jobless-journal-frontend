@@ -1,0 +1,43 @@
+# Dokploy Configuration
+# This file contains deployment settings for Dokploy
+
+# Application settings
+app:
+  name: "jobless-journal-frontend"
+  type: "docker"
+  
+# Build settings
+build:
+  dockerfile: "Dockerfile"
+  context: "."
+  
+# Deployment settings
+deploy:
+  port: 80
+  healthcheck:
+    path: "/"
+    interval: 30
+    timeout: 10
+    retries: 3
+    
+# Environment variables (add your custom ones here)
+env:
+  NODE_ENV: "production"
+  
+# Resource limits
+resources:
+  memory: "512M"
+  cpu: "0.5"
+  
+# Scaling
+scale:
+  replicas: 1
+  
+# Domain configuration (update with your domain)
+domains:
+  - name: "your-domain.com"
+    ssl: true
+    
+# Backup configuration (optional)
+backup:
+  enabled: false
